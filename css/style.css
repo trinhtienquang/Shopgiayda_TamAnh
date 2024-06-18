@@ -94,6 +94,27 @@ ol {
   position: relative;
 }
 
+.direct {
+  margin: 0 0 60px;
+  background: #f5f5f5;
+}
+.direct .breakcumb {
+  padding: 18px 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.direct .breakcumb li {
+  display: inline !important;
+}
+.direct .breakcumb li + li::before {
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f105" !important;
+  color: #ddba76;
+  margin: 0 10px;
+}
+
 .text_hotline {
   margin: 35px 0px;
 }
@@ -207,6 +228,7 @@ ol {
   z-index: 999;
   width: 100%;
   background: #fff;
+  border-bottom: 1px solid black;
 }
 
 .slider .single-item img {
@@ -491,6 +513,311 @@ ol {
 }
 .best-seller .best-seller-list .card-text:hover {
   color: #ddba76;
+}
+.best-seller .see-all {
+  display: block;
+  margin: 70px auto 0px auto;
+  font-family: "iCiel Fester Semi-Condensed";
+  display: table;
+  font-size: 14px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+  color: #ddba76;
+}
+.best-seller .see-all::before {
+  position: absolute;
+  content: "" !important;
+  width: 100%;
+  height: 3px;
+  background: #ddba76;
+  bottom: -5px;
+  right: 3px;
+  left: 0;
+}
+
+.reviews {
+  padding: 65px 0;
+}
+.reviews .review-title {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: "iCiel Fester Semi-Condensed";
+  margin: 0 0 25px;
+  position: relative;
+}
+.reviews .comment-item {
+  text-align: center;
+}
+.reviews .comment-item .avatar {
+  margin-bottom: 15px;
+}
+.reviews .comment-item .avatar img {
+  margin: 0 auto;
+}
+.reviews .comment-item .author {
+  font-family: "iCiel Fester Semi-Condensed";
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 20px;
+  line-height: 15px;
+}
+.reviews .comment-item .content-comment strong {
+  display: block;
+  color: #333 !important;
+  margin-bottom: 15px;
+}
+.reviews .comment-item .date-time .rating {
+  display: table;
+  top: 0;
+  position: relative;
+  display: inline-block;
+  left: 5px;
+}
+.reviews .comment-item .date-time .rating .star-rating {
+  float: right;
+  overflow: hidden;
+  position: relative;
+  height: 1em;
+  line-height: 1;
+  font-size: 1em;
+  width: 5.4em;
+}
+.reviews .comment-item .date-time .rating .star-rating span {
+  overflow: hidden;
+  position: absolute;
+  padding-top: 1.5em;
+  left: 0;
+}
+.reviews .comment-item .date-time .rating .star-rating span::before {
+  content: "\ece2\ece2\ece2\ece2\ece2";
+  font: normal normal normal 15px/1 Icomoon;
+  top: 0;
+  left: 0;
+  position: absolute;
+  color: #ddba76;
+}
+.reviews .slick-initialized .slick-slide {
+  margin: 0 15px;
+}
+.reviews .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 4px;
+  height: 76px;
+  margin-top: -30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1;
+  z-index: 5;
+  transition: all 0.2s linear;
+  background-color: transparent;
+}
+.reviews .slick-prev {
+  left: 0;
+}
+.reviews .slick-prev.slick-disabled::before {
+  opacity: 0.25;
+}
+.reviews .slick-prev::before {
+  content: "";
+  background: url(../public/images/giayda/icon_prev.png) center center no-repeat;
+  padding: 38px 27px;
+  opacity: 1;
+  display: block;
+}
+.reviews .slick-next {
+  right: 0;
+}
+.reviews .slick-next.slick-disabled::before {
+  opacity: 0.25;
+}
+.reviews .slick-next::before {
+  content: "";
+  background: url(../public/images/giayda/icon_next.png) center center no-repeat;
+  padding: 38px 27px;
+  opacity: 1;
+  display: block;
+}
+
+.footer {
+  padding: 50px 0 0;
+  background: #444a59;
+  color: #82848b;
+}
+.footer .footer-title {
+  text-align: center;
+  font-family: "iCiel Fester Semi-Condensed";
+  font-display: optional;
+  font-size: 18px;
+  color: #ddba76;
+  position: relative;
+  margin: 0 auto;
+  display: table;
+  padding-bottom: 50px;
+}
+.footer .footer-title span {
+  color: white;
+}
+.footer .footer-title::before {
+  position: absolute;
+  content: "" !important;
+  width: 35px;
+  height: 2px;
+  background: #ddba76;
+  left: -52px;
+  top: 9px;
+}
+.footer .footer-title::after {
+  position: absolute;
+  content: "" !important;
+  width: 35px;
+  height: 2px;
+  background: #ddba76;
+  right: -52px;
+  top: 9px;
+}
+.footer .footer-content .container {
+  border-left: 1px solid #555a68;
+  border-right: 1px solid #555a68;
+}
+.footer .footer-content .col-md-3, .footer .footer-content .col-md-4 {
+  padding: 75px 40px 0 0;
+  min-height: 300px;
+}
+.footer .footer-content .col-md-4 {
+  padding-bottom: 70px;
+}
+.footer .footer-content .service {
+  padding-left: 30px;
+}
+.footer .footer-content .service .service-title {
+  position: relative;
+  margin: 0 0 35px;
+  font-family: "iCiel Fester Semi-Condensed";
+}
+.footer .footer-content .service .service-title h4 {
+  font-size: 18px;
+  color: white;
+}
+.footer .footer-content .service .service-title::before {
+  position: absolute;
+  content: "" !important;
+  width: 70px;
+  height: 3px;
+  background: #ddba76;
+  bottom: -5px;
+}
+.footer .footer-content .service .menu-service ul li {
+  margin: 10px 0;
+}
+.footer .footer-content .service .menu-service ul li a {
+  font-size: 15px;
+  color: #82848b;
+  transition: all 0.1s linear;
+  line-height: 30px;
+}
+.footer .footer-content .service .menu-service ul li a:hover {
+  color: #ddba76;
+}
+.footer .footer-content .policy .policy-title {
+  position: relative;
+  margin: 0 0 35px;
+  font-family: "iCiel Fester Semi-Condensed";
+}
+.footer .footer-content .policy .policy-title h4 {
+  font-size: 18px;
+  color: white;
+}
+.footer .footer-content .policy .policy-title::before {
+  position: absolute;
+  content: "" !important;
+  width: 70px;
+  height: 3px;
+  background: #ddba76;
+  bottom: -5px;
+}
+.footer .footer-content .policy .menu-policy ul li {
+  margin: 10px 0;
+}
+.footer .footer-content .policy .menu-policy ul li a {
+  font-size: 15px;
+  color: #82848b;
+  transition: all 0.1s linear;
+  line-height: 30px;
+}
+.footer .footer-content .policy .menu-policy ul li a:hover {
+  color: #ddba76;
+}
+.footer .footer-content .map:first-child {
+  padding-left: 30px;
+}
+.footer .footer-content .map .city {
+  position: relative;
+  font-family: "iCiel Fester Semi-Condensed";
+}
+.footer .footer-content .map .city h4 {
+  font-size: 18px;
+  color: white;
+}
+.footer .footer-content .map .list-address ul li {
+  margin: 10px 0;
+}
+.footer .footer-content .map .list-address ul li a {
+  font-size: 15px;
+  color: #82848b;
+  transition: all 0.1s linear;
+  line-height: 30px;
+}
+.footer .footer-content .map .list-address ul li a:hover {
+  color: #ddba76;
+}
+.footer .footer-content .map .list-address ul li .address i {
+  font-size: 15px;
+  color: #ddba76;
+}
+.footer .footer-content .map .list-address ul li .hotline_map {
+  display: table;
+  width: 100%;
+}
+.footer .footer-content .map .list-address ul li .hotline_map .link-map {
+  float: right;
+}
+.footer .footer-bottom {
+  padding: 30px 0;
+  background: #353a47;
+  color: #82848b;
+}
+.footer .footer-bottom ul li {
+  float: left;
+  font-size: 16px;
+  padding: 0 40px;
+  position: relative;
+}
+.footer .footer-bottom ul li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #ddba76;
+  left: 0;
+  top: 50%;
+}
+.footer .footer-bottom ul li a {
+  color: #ddba76;
+}
+.footer .footer-bottom ul li strong {
+  color: white;
+  font-weight: unset;
 }
 
 /*# sourceMappingURL=style.css.map */

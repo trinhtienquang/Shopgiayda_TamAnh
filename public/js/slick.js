@@ -23,7 +23,40 @@ $(document).ready(function () {
       {
         breakpoint: 1025,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          infinite: false,
+        },
+      },
+    ],
+    // autoplay: true,
+    // autoplaySpeed: 1000,
+  });
+});
+
+$(document).ready(function () {
+  $(".comment-slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: true,
+    draggable: false,
+    prevArrow: `<button type='button' class='slick-prev slick-arrow'></button>`,
+    nextArrow: `<button type='button' class='slick-next slick-arrow'></button>`,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
         },
       },
       {
