@@ -72,3 +72,34 @@ $(document).ready(function () {
     // autoplaySpeed: 1000,
   });
 });
+$(document).ready(function () {
+  $(".slider_img").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: true,
+    draggable: false,
+    prevArrow: `<button type='button' class='slick-prev slick-arrow'></button>`,
+    nextArrow: `<button type='button' class='slick-next slick-arrow'></button>`,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 3,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          arrows: true,
+          infinite: false,
+        },
+      },
+    ],
+    // autoplay: true,
+    // autoplaySpeed: 1000,
+  });
+})

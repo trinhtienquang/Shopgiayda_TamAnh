@@ -115,40 +115,38 @@ ol {
   margin: 0 10px;
 }
 
-.text_hotline {
+.header .top_header .text_hotline {
   margin: 35px 0px;
 }
-.text_hotline span {
+.header .top_header .text_hotline span {
   font-size: 16px;
   color: #a8a8a8;
 }
-.text_hotline strong {
+.header .top_header .text_hotline strong {
   font-size: 16px;
   margin-left: 5px;
 }
-
-.logo_header {
+.header .top_header .logo_header {
   padding: 22px 0px;
 }
-
-.midle_header {
+.header .midle_header {
   border: 1px solid #e6e6e6;
 }
-.midle_header .container {
+.header .midle_header .container {
   padding: 6px 15px;
 }
-.midle_header .container .list_product {
+.header .midle_header .container .list_product {
   cursor: pointer;
   position: relative;
   max-width: 270px;
 }
-.midle_header .container .list_product .title_widget {
+.header .midle_header .container .list_product .title_widget {
   padding: 10px 0px 10px 55px;
   border-right: 1px solid #e6e6e6;
   border-left: 1px solid #e6e6e6;
   position: relative;
 }
-.midle_header .container .list_product .title_widget span {
+.header .midle_header .container .list_product .title_widget span {
   font-family: "iCiel Fester Semi-Condensed";
   font-size: 16px;
   text-transform: uppercase;
@@ -157,13 +155,13 @@ ol {
   position: relative;
   top: 3px;
 }
-.midle_header .container .list_product .title_widget::before {
+.header .midle_header .container .list_product .title_widget::before {
   position: absolute;
   content: url(../public/images/giayda/icon_bar_menu.png);
   left: 15px;
   top: 14px;
 }
-.midle_header .container .list_product .title_widget::after {
+.header .midle_header .container .list_product .title_widget::after {
   content: "\f31a";
   font: normal normal normal 14px/1 phosphor;
   position: absolute;
@@ -171,7 +169,7 @@ ol {
   color: #ddba76;
   top: 18px;
 }
-.midle_header .container .list_product .list_product_menu {
+.header .midle_header .container .list_product .list_product_menu {
   position: absolute;
   z-index: 2;
   background: #fff;
@@ -181,33 +179,37 @@ ol {
   top: 100%;
   transition: all 0.3s;
 }
-.midle_header .container .list_product .list_product_menu ul {
+.header .midle_header .container .list_product .list_product_menu ul {
   position: absolute;
   background: #fff;
   width: 270px;
 }
-.midle_header .container .list_product .list_product_menu ul li {
+.header .midle_header .container .list_product .list_product_menu ul li {
   position: relative;
   border-bottom: 1px solid #e6e6e6;
   padding: 20px 0;
 }
-.midle_header .container .list_product .list_product_menu ul li a {
+.header .midle_header .container .list_product .list_product_menu ul li a {
   position: relative;
   padding: 0 20px 0 35px;
   display: block;
   font-family: "VNF-Futura";
 }
-.midle_header .container .list_product:hover .list_product_menu {
+.header .midle_header .container .list_product:hover .list_product_menu {
   top: 80%;
   visibility: visible;
   opacity: 1;
 }
-.midle_header .container .menu_desktop ul li {
+.header .midle_header .container .menu_desktop {
+  position: relative;
+  float: left;
+}
+.header .midle_header .container .menu_desktop ul li {
   display: inline-block;
   position: relative;
   padding: 10px 0px;
 }
-.midle_header .container .menu_desktop ul li a {
+.header .midle_header .container .menu_desktop ul li a {
   display: block;
   padding: 0px 35px;
   color: #444a59;
@@ -220,8 +222,98 @@ ol {
   overflow: hidden;
   font-family: "iCiel Fester Semi-Condensed";
 }
-
-.fix_menu {
+.header .midle_header .container .cart {
+  float: right;
+  padding: 10px 0 0;
+}
+.header .midle_header .container .cart .count {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: #ddba76;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  line-height: 22px;
+  top: -10px;
+  right: 5px;
+}
+.header .shopping_cart {
+  position: fixed;
+  width: 390px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background: #eee;
+  z-index: 2;
+  padding: 30px 27px;
+  transition: 0.3s;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  max-width: 100%;
+}
+.header .shopping_cart .bg_shopping_cart {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  right: 390px;
+  z-index: -1;
+  transition: 0.2s;
+  display: block !important;
+  pointer-events: none;
+  opacity: 0;
+}
+.header .shopping_cart .content_shopping_cart {
+  height: 100%;
+}
+.header .shopping_cart .content_shopping_cart .title {
+  color: #444a59;
+  display: flex;
+  align-items: center;
+}
+.header .shopping_cart .content_shopping_cart .title label {
+  font-family: "iCiel Fester Semi-Condensed";
+  font-size: 18px;
+}
+.header .shopping_cart .content_shopping_cart .title span {
+  margin-top: 0;
+  font-size: 14px;
+  margin: 0px 0 0 5px;
+}
+.header .shopping_cart .content_shopping_cart .close_shopping_cart {
+  position: absolute;
+  right: 30px;
+  top: 32px;
+  color: #555a68;
+  cursor: pointer;
+}
+.header .shopping_cart .content_shopping_cart .close_shopping_cart i {
+  font-size: 20px;
+}
+.header .shopping_cart .content_shopping_cart .content_cart {
+  padding: 28px 0 30px;
+  height: 100%;
+}
+.header .shopping_cart .content_shopping_cart .content_cart .list_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.header .shopping_cart.active_cart .bg_shopping_cart {
+  opacity: 1;
+  pointer-events: auto;
+}
+.header .active_cart {
+  opacity: 1;
+  pointer-events: auto;
+}
+.header .fix_menu {
   position: fixed;
   top: 0;
   left: 0;

@@ -23,7 +23,8 @@
   <!-- Theme JS files -->
   <script src="../public/js/app.js"></script>
   <script src="../public/js/slick.js"></script>
-  <script src="../public/js/custom.js"></script>
+  <script defer src="../public/js/customcart.js"></script>
+  <script defer src="../public/js/custom.js"></script>
 
   <!-- /theme JS files -->
 
@@ -73,7 +74,7 @@
           </div>
           <div class="col-xs-12 col-sm-9">
             <div class="menu_desktop">
-              <ul class="d-flex">
+              <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="../html/introduce.html">Giới thiệu</a></li>
                 <li><a href="">Liên hệ</a></li>
@@ -81,10 +82,25 @@
                 <li><a href="">Tin tức</a></li>
               </ul>
             </div>
-            <div class="cart">
-
-            </div>
+            <div class="cart"><i class="icon-cart2"></i><span class="count">0</span></div>
             <div class="search"></div>
+            <div class="shopping_cart">
+              <div class="bg_shopping_cart"></div>
+              <div class="content_shopping_cart">
+                <div class="title">
+                  <label for="">Giỏ hàng</label>
+                  <span>(0 sản phẩm)</span>
+                </div>
+                <div class="close_shopping_cart">
+                  <i class="ph-x"></i>
+                </div>
+                <div class="content_cart">
+                  <div class="list_item">
+                    <p> chưa có sản phẩm</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -509,6 +525,7 @@
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>
