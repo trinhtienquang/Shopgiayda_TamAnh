@@ -18,9 +18,7 @@ $(document).ready(function () {
 
 //==========Detail Product change picture============
 const bigImg = document.querySelector(".big_img img");
-// console.log(bigImg)
 const smallImgs = document.querySelectorAll(".small_img .slider_img p img");
-// console.log(smallImgs)
 smallImgs.forEach(function (imgItem) {
   imgItem.addEventListener("click", function () {
     bigImg.src = imgItem.src
@@ -83,6 +81,7 @@ amountElement.addEventListener('input', ()=>{
     console.log(amount);
 })
 
+//===============Chọn size sản phẩm======================
 const sizeItems = document.querySelectorAll('#choose-size li');
 
   // Lặp qua từng phần tử và thêm sự kiện click
